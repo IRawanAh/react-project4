@@ -17,6 +17,7 @@ class ChangePasswordForm extends Component {
     console.log(url);
     fetch(url, {
       method: "PATCH",
+      mode: "cors",
       credentials: "include",
       headers: {
         "Content-Type": "application/json"

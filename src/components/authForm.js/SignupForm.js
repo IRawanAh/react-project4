@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import apiUrl from "../../apiConfig";
-import { setJwtCookie, setUser } from "../../services/AuthService";
+import { setUser } from "../../services/AuthService";
 class SignupForm extends Component {
   state = {
     formData: {
@@ -15,6 +15,8 @@ class SignupForm extends Component {
     let url = `${apiUrl}/sign-up`;
 
     fetch(url, {
+      mode: "cors",
+      credentials: "include",
       method: "POST",
       headers: {
         "Content-type": "application/json"
@@ -25,8 +27,7 @@ class SignupForm extends Component {
       .then(data => {
         if (data.error) this.setState({ err: data.error });
         else {
-          setJwtCookie(data.token);
-          setUser(data.user);
+          setUser(data);
           this.props.onSignin();
         }
       })

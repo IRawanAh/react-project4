@@ -28,6 +28,7 @@ class App extends Component {
     this.changeActivePage("profile");
   };
   onSignout = () => {
+    console.log("sigin out");
     this.setState({ user: null });
     Signout();
   };
