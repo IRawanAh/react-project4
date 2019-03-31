@@ -25,14 +25,16 @@ class SignupForm extends Component {
     })
       .then(res => res.json())
       .then(data => {
-        if (data.error) this.setState({ err: data.error });
+        if (data.status > 200) this.setState({ err: data.message });
         else {
+          console.log(data)
           setUser(data);
           this.props.onSignin();
         }
       })
       .catch(e => console.log(e));
   };
+
   handleSubmit = e => {
     e.preventDefault();
     this.handleLoginRequest(this.state.formData);
@@ -51,8 +53,8 @@ class SignupForm extends Component {
         {this.state.err ? (
           <div className="alert alert-warning"> {this.state.err} </div>
         ) : (
-          ""
-        )}
+            ""
+          )}
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>email </label>

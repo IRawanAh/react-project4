@@ -7,6 +7,7 @@ import SignupForm from "./components/authForm.js/SignupForm";
 import ChangePasswordForm from "./components/authForm.js/ChangePasswordForm";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
+import UserInfo from "./components/UserInfo";
 class App extends Component {
   state = {
     user: null,
@@ -25,7 +26,7 @@ class App extends Component {
   };
   onSignin = () => {
     this.setState({ user: getUser() });
-    this.changeActivePage("profile");
+    this.changeActivePage("UserInfo");
   };
   onSignout = () => {
     console.log("sigin out");
@@ -42,23 +43,24 @@ class App extends Component {
           onSignout={this.onSignout}
         />
 
-        <div className="container">
+        <div >
           {activePage === "home" ? <Home /> : ""}
           {activePage === "sign-in" ? (
             <SigninForm onSignin={this.onSignin} />
           ) : (
-            ""
-          )}
+              ""
+            )}
           {activePage === "sign-up" ? (
             <SignupForm onSignin={this.onSignin} />
           ) : (
-            ""
-          )}
+              ""
+            )}
           {activePage === "change-password" ? (
             <ChangePasswordForm changeActivePage={this.changeActivePage} />
           ) : (
-            ""
-          )}
+              ""
+            )}
+          {activePage == "UserInfo" ? <UserInfo changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "profile" ? <Profile /> : ""}
         </div>
       </div>
