@@ -50,7 +50,11 @@ img {
     padding: 10px;
     margin: 10px;
   }
-  
+  .skillContainer select{
+    margin: 10px !important;
+    width: 20% !important;
+    display: inline-block;
+  }
   .skillContainer h3{
     display: inline-block;
     width: 15%;
@@ -85,14 +89,15 @@ img {
   
   }
   .slidecontainer {
-    width: 80%;
+    width: 60%;
+    padding-top:20px; 
     display: inline-block;
   
   }
   
   .slider {
     -webkit-appearance: none;
-    width: 100%;
+    width: 90%;
     height: 35px;
     border-radius: 10px;
     background: #d3d3d3;
@@ -100,6 +105,7 @@ img {
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    display: inline-block;
   }
   
   .slider:hover {
@@ -115,5 +121,11 @@ img {
     border-radius: 10px;
     background: #4CAF50;
     cursor: pointer;
+  }
+
+  select{
+    display: inline-block !important;
+    width: 30% !important;
+    margin-left: 10% !important;
   }
   

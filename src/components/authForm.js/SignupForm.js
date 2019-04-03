@@ -48,7 +48,7 @@ class SignupForm extends Component {
 
   render() {
     return (
-      <div className="pt-5 mt-5">
+      <div className="pt-5 mt-5 container">
         <h1>PLEASE SIGNUP</h1>
         {this.state.err ? (
           <div className="alert alert-warning"> {this.state.err} </div>

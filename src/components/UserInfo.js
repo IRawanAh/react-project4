@@ -45,6 +45,7 @@ class UserInfo extends Component {
         const formData = { ...this.state.formData };
         formData[currentTarget.name] = currentTarget.value;
         this.setState({ formData });
+        console.log(this.state.formData);
     };
     render() {
 

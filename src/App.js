@@ -60,7 +60,7 @@ class App extends Component {
           ) : (
               ""
             )}
-          {activePage == "UserInfo" ? <UserInfo changeActivePage={this.changeActivePage} /> : ""}
+          {activePage === "UserInfo" ? <UserInfo changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "profile" ? <Profile /> : ""}
         </div>
       </div>
