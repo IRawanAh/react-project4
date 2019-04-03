@@ -50,20 +50,21 @@ class UserInfo extends Component {
     render() {
 
         return (
-            <div>
+            <div className="container">
                 <h1>User Info</h1>
                 <form onSubmit={this.handleSubmit}>
                     <h3>Name:</h3>
-                    <input type="text" onChange={this.handleChange} name="name" />
+                    <input class="form-control" type="text" onChange={this.handleChange} name="name" />
                     <h3>Location:</h3>
-                    <input type="text" onChange={this.handleChange} name="location" />
+                    <input class="form-control" type="text" onChange={this.handleChange} name="location" />
                     <h3>Github:</h3>
-                    <input type="text" onChange={this.handleChange} name="github" />
+                    <input class="form-control" type="text" onChange={this.handleChange} name="github" />
                     <h3>Twitter:</h3>
-                    <input type="text" onChange={this.handleChange} name="twitter" />
+                    <input class="form-control" type="text" onChange={this.handleChange} name="twitter" />
                     <h3>LinkedIn:</h3>
-                    <input type="text" onChange={this.handleChange} name="linkedin" />
-                    <button type='submit'>Save</button>
+                    <input class="form-control" type="text" onChange={this.handleChange} name="linkedin" />
+                    <br />
+                    <button class="btn btn-primary" type='submit'>Save</button>
 
                 </form>
             </div>

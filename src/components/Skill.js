@@ -28,12 +28,6 @@ class Skill extends Component {
             })
             .catch(e => console.log(e))
     }
-    componentDidMount() {
-
-
-
-
-    }
 
     render() {
 
@@ -42,11 +36,10 @@ class Skill extends Component {
                 <div className="skillContainer" >
 
                     <h3>{this.props.skill.name}</h3>
-
-                    <div className="bar">
+                    <div style={{ display: "inline-block", width: "60%" }} className="bar">
                         <div className="skills" id="level" style={{ width: this.props.skill.userskills.level + "%" }}>{this.props.skill.userskills.level + "%"}</div>
                     </div>
-                    {(this.props.edit) ? <h3 onClick={this.handleDeleteSkillRequest}>x</h3> : ""}
+                    {(this.props.edit) ? <h3 style={{ width: "10%" }} onClick={this.handleDeleteSkillRequest}>x</h3> : ""}
                 </div>
             </div >
         );

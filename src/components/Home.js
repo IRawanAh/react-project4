@@ -104,14 +104,23 @@ class Home extends Component {
         </select>
         const skillsList = this.state.skills.map(skill => <option value={skill.id}>{skill.name}</option>)
 
-        const userslist = <div className="container">
-            <select name="id" class="form-control"
-                onChange={this.handleChange}>
-                {skillsList}
-            </select>
-            {level}
-            <button class="btn btn-default" onClick={this.find}>Find</button>
-            {user}
+        const userslist = <div>
+            <div style={{ padding: "30px", width: "100%", background: "gray" }}>
+                <select name="id" class="form-control"
+                    onChange={this.handleChange}>
+                    {skillsList}
+                </select>
+                {level}
+                <button class="btn btn-default" onClick={this.find}>Find</button>
+            </div>
+
+            <div className="container">
+
+                <div>
+                    {user}
+                </div>
+            </div>
+
         </div >
         return (
             <div>

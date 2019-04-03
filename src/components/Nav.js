@@ -11,6 +11,12 @@ const authenticatedOptions = (changeActivePage, onSignout) => (
     <li className="nav-item" onClick={() => onSignout()}>
       <div className="nav-link">Sign Out</div>
     </li>
+    <li className="nav-item" onClick={() => changeActivePage("profile")}>
+      <div className="nav-link">Profile</div>
+    </li>
+    <li className="nav-item" onClick={() => changeActivePage("UserInfo")}>
+      <div className="nav-link">Update profile</div>
+    </li>
   </React.Fragment>
 );
 
@@ -28,12 +34,13 @@ const unauthenticatedOptions = changeActivePage => (
 
 const alwaysOptions = changeActivePage => (
   <React.Fragment>
-    <li className="nav-item" onClick={() => changeActivePage("home")}>
+    <li className="nav-item" onClick={() => {
+      window.location.reload()
+      changeActivePage("home")
+    }}>
       <div className="nav-link">Home</div>
     </li>
-    <li className="nav-item" onClick={() => changeActivePage("profile")}>
-      <div className="nav-link">Profile</div>
-    </li>
+
   </React.Fragment>
 );
 
