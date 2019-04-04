@@ -24,7 +24,9 @@ class Profile extends Component {
         contact: {},
         addSkill: "hide",
         skillvalue: 30,
-        edit: false
+        edit: false,
+        github: null,
+        linkedin: null
 
     }
     hideForm = () => {
@@ -91,6 +93,8 @@ class Profile extends Component {
                     var id = data.user.id;
                     console.log(id);
                     this.setState({ location: data.user.location })
+                    this.setState({ github: data.user.github })
+                    this.setState({ linkedin: data.user.linkedin })
                     this.gettingUserSkills(id);
                 })
                 .catch(e => console.log(e));
@@ -113,6 +117,7 @@ class Profile extends Component {
                     var id = data.user.id;
                     console.log(id);
                     this.setState({ location: data.user.location })
+                    this.setState({ linkedin: data.user.linkedin })
                     this.setState({ edit: true })
                     this.gettingUserSkills(id);
                 })
@@ -183,12 +188,13 @@ class Profile extends Component {
                          </p>
                     <div className="contact profile">
                         <a href="#"><i className="fa fa-twitter"></i></a>
-                        <a href="#"><i className="fa fa-linkedin"></i></a>
-                        <a href="#"><i className="fa fa-github"></i></a>
+                        <a href={this.state.linkedin}><i className="fa fa-linkedin"></i></a>
+                        <a href={this.state.github}><i className="fa fa-github"></i></a>
                     </div>
                 </div>
                 <div className="info">
                     <div className="container">
+
                         <h1>Skills</h1>
                         {this.state.edit ? <h2 onClick={this.hideForm}>+</h2> : ""}
                         {userSkillslist}

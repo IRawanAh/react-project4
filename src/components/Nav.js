@@ -40,13 +40,19 @@ const alwaysOptions = changeActivePage => (
     }}>
       <div className="nav-link">Home</div>
     </li>
+    <li className="nav-item" onClick={() => {
+      // window.location.reload()
+      changeActivePage("posts")
+    }}>
+      <div className="nav-link">Posts</div>
+    </li>
 
   </React.Fragment>
 );
 
 const Nav = ({ user, changeActivePage, onSignout }) => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <div className="navbar-brand">Navbar</div>
+    <div className="navbar-brand">Team-up</div>
     <button
       className="navbar-toggler"
       type="button"

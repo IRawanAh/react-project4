@@ -6,7 +6,7 @@ img {
   
   }
   div .profile{
-    background-color: gray;
+    background-color: GRAY;
     text-align: center;
     margin-bottom: 0px;
   }
@@ -86,6 +86,7 @@ img {
   }
   body{
     background-color: #cccccc !important;
+
   
   }
   .slidecontainer {
@@ -128,4 +129,10 @@ img {
     width: 30% !important;
     margin-left: 10% !important;
   }
-  
+  p{
+    margin: 20px;
+  }
+.post{
+  width: 100% !important;
+  margin-left: 0% !important;
+}
