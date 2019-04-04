@@ -39,7 +39,7 @@ class Skill extends Component {
                     <div style={{ display: "inline-block", width: "60%" }} className="bar">
                         <div className="skills" id="level" style={{ width: this.props.skill.userskills.level + "%" }}>{this.props.skill.userskills.level + "%"}</div>
                     </div>
-                    {(this.props.edit) ? <h3 style={{ width: "10%" }} onClick={this.handleDeleteSkillRequest}>x</h3> : ""}
+                    {(this.props.edit) ? <p style={{ width: "10%", color: "red", display: "inline" }} onClick={this.handleDeleteSkillRequest}>Delete</p> : ""}
                 </div>
             </div >
         );

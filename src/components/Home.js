@@ -105,7 +105,7 @@ class Home extends Component {
         const skillsList = this.state.skills.map(skill => <option value={skill.id}>{skill.name}</option>)
 
         const userslist = <div>
-            <div style={{ padding: "30px", width: "100%", background: "gray" }}>
+            <div style={{ padding: "30px", width: "100%", background: "#e8e666" }}>
                 <select name="id" class="form-control"
                     onChange={this.handleChange}>
                     {skillsList}
