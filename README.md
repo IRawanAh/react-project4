@@ -34,12 +34,12 @@ Team-up is a web app helps developer to team up, and find each other based on th
 
 
 ## Future work
-* Work more on the posts feature: <br>
+## Work more on the posts feature:
 - Add relation between posts and users.<br>
 - Add many to many relation between posts and skills.<br>
 - Work more on the interface design.<br>
 
-* Add new features: <br>
+## Add new features: 
 - Users can chat and follow each other.<br>
 - Users can add their projects on thier profile.<br>
 
