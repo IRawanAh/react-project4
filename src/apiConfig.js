@@ -1,6 +1,6 @@
 let apiUrl;
 const apiUrls = {
-  production: "https://<>.herokuapp.com",
+  production: "https://frozen-oasis-19059.herokuapp.com",
   development: "http://localhost:3001"
 };
 

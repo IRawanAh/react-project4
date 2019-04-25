@@ -1,51 +1,52 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+# Team-up
 
-# React Template
+## About the App.
+Team-up is a web app helps developer to team up, and find each other based on their skills.
 
-A template for starting projects with `react`. Includes authentication.
+## Project link
+[Click here](http://rawanah995.github.io/react-project4)
 
-## Dependencies
+## Technologies
+* Express and Node.js as backend server.
+* React as frontend.
+* Sequelize.
+* Bootstrap.
 
-Install with `npm install`.
+## Features:
+* Finding users by their skills.
 
--
+![Home interface](Home.png)
 
-## Installation
+* Each user has a profile.
 
-### Download Template:
+![Profile interface](Profile.png)
 
-1.  [Download](../../archive/master.zip) this template.
-1.  Unzip and rename the template directory (`unzip ~/Downloads/react-template-master.zip`)
-1.  Move into the new project and `git init`.
+* Users can add and delete their skills 
 
-### Customize Template:
+![Skill interface](Skill.png)
 
-1.  Empty [`README.md`](README.md) and fill with your own content.
+* Users can post projects to find developers, and each post has a skill.
 
-### Setup Environment:
 
-1.  Install dependencies with `npm install`.
-1.  `git add` and `git commit` your changes.
+* The posts will appear differently for the users, only the posts that matching user skills will appear.
 
-### Run your server!
+![Posts interface](Posts.png)
 
-1. Run the API server with `npm start`.
 
-## Structure
+## Future work
+* Work more on the posts feature: <br>
+- Add relation between posts and users.<br>
+- Add many to many relation between posts and skills.<br>
+- Work more on the interface design.<br>
 
-User authentication is built-in.
+* Add new features: <br>
+- Users can chat and follow each other.<br>
+- Users can add their projects on thier profile.<br>
 
-## Tasks
 
-Developers should run these often!
+## Thanks
+* Thanks for my amazing instructors: Mike, Usman and Ghadeer.
+* Thanks for my great class mates.
 
-- `npm start`
-- `npm run deploy`
 
-### Authentication
 
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.

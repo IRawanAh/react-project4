@@ -51,7 +51,7 @@ const alwaysOptions = changeActivePage => (
 );
 
 const Nav = ({ user, changeActivePage, onSignout }) => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="navbar-brand">Team-up</div>
     <button
       className="navbar-toggler"

@@ -13,8 +13,8 @@ class Home extends Component {
         userId: null,
         skills: [],
         formData: {
-            id: null,
-            level: null
+            id: 1,
+            level: "Beginner"
         }
     }
 

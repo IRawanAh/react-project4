@@ -13,8 +13,8 @@ class Profile extends Component {
         location: null,
         skills: [],
         formData: {
-            id: null,
-            level: null
+            id: 1,
+            level: 30
         },
         userSkills: [],
         projects: [{
@@ -196,28 +196,30 @@ class Profile extends Component {
                     <div className="container">
 
                         <h1>Skills</h1>
-                        {this.state.edit ? <h2 onClick={this.hideForm}>+</h2> : ""}
+                        {this.state.edit ? <h2 style={{ cursor: "pointer" }} onClick={this.hideForm}>+</h2> : ""}
                         {userSkillslist}
                         <div id={this.state.addSkill}>
                             <h2>New skill</h2>
-                            <div className="skillContainer " >
-                                <select name="id" className="form-control" onChange={this.handleChange}>
+                            <div className="skillContainer slidecontainer row " >
+                                <select name="id" className="form-control col-md-2 col-sm-1" onChange={this.handleChange}>
                                     {skillsList}
                                 </select>
-                                <div className="slidecontainer">
-                                    <input type="range" min="1" max="100" name="level" value={this.state.formData.level} className="slider"
-                                        onChange={this.handleChange} />
-                                    <button class="btn btn-default" onClick={this.handleSubmit}>Add</button>
-                                </div>
+
+                                <input type="range" min="1" max="100" name="level" value={this.state.formData.level} className="slider col-md-6 col-sm-1"
+                                    onChange={this.handleChange} />
+                                <p style={{ marginTop: "20px !important" }} className="col-md-1 col-sm-1" >{this.state.formData.level <= 50 ? "Beginner" : this.state.formData.level <= 75 ? "Intermediate" : "Advanced"}</p>
+                                <button class="btn btn-default col-md-1 col-sm-1" onClick={this.handleSubmit}>Add</button>
+
 
                             </div>
                             <p>Value:{this.state.formData.level}</p>
 
                         </div>
+
+                        <br />
+                        <h1>Projects</h1>
+                        {projectslist}
                     </div>
-                    <h1>Projects</h1>
-                    {projectslist}
-                    <h1>Contact</h1>
                 </div>
             </div >
 

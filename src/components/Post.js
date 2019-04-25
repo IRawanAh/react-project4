@@ -34,9 +34,11 @@ class Post extends Component {
         fetch(url, {
             mode: "cors",
             credentials: "include",
+
             method: "GET",
             headers: {
-                "Content-type": "application/json"
+                "Content-type": "application/json",
+
             }
         })
             .then(res => res.json())

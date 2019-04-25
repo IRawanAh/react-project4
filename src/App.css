@@ -40,7 +40,7 @@ img {
     text-align: right; 
     padding: 10px; 
     margin-bottom: 20px;
-    display: inline-block;
+    /* display: inline-block; */
   
   
   }
@@ -49,6 +49,9 @@ img {
     border-radius: 30px;
     padding: 10px;
     margin: 10px;
+  }
+  .skillContainer p{
+    margin-top: 20px !important ;
   }
   .skillContainer select{
     margin: 10px !important;
@@ -64,9 +67,7 @@ img {
   margin: 10%;
   margin-bottom: 0px;
   }
-  
-  
-  
+
   #level { 
     background-color: #4CAF50;
     border-radius: 10px;
@@ -74,7 +75,8 @@ img {
   
   .bar{
   display: inline-block;
-  width: 80%;
+ width: 100%;
+ margin-top: 20px; 
   background-color: white;
   }
   .container h1, h2{
@@ -85,21 +87,27 @@ img {
     display: none;
   }
   body{
-    background-color: #e2e4e5 !important;
-
-  
+    background-color: #e2e4e5 !important; 
   }
 
   .slidecontainer {
-    width: 60%;
-    padding-top:20px; 
+    /* width: 75%; */
     display: inline-block;
-  
+   margin: 10px;
   }
+  .slidecontainer p{
+    color: #4CAF50;
+    
+  }   
+  
+ .slidecontainer button{
+    padding: 0px !important; 
+    margin: 0px !important; 
+  }   
   
   .slider {
     -webkit-appearance: none;
-    width: 90%;
+    width: 70%;
     height: 35px;
     border-radius: 10px;
     background: #d3d3d3;
@@ -108,6 +116,7 @@ img {
     -webkit-transition: .2s;
     transition: opacity .2s;
     display: inline-block;
+    margin-top: 10px;
   }
   
   .slider:hover {
